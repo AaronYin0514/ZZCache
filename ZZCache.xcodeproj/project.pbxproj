@@ -14,6 +14,9 @@
 		188354B11CFAA3C60078359F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188354B01CFAA3C60078359F /* Assets.xcassets */; };
 		188354B41CFAA3C60078359F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188354B21CFAA3C60078359F /* LaunchScreen.storyboard */; };
 		188354BF1CFAA3C60078359F /* ZZCacheUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188354BE1CFAA3C60078359F /* ZZCacheUITests.m */; };
+		188354CC1CFAA4240078359F /* ZZCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 188354CB1CFAA4240078359F /* ZZCache.m */; };
+		188354CF1CFAA6240078359F /* ZZDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 188354CE1CFAA6240078359F /* ZZDiskCache.m */; };
+		188354D21CFAA6430078359F /* ZZMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 188354D11CFAA6430078359F /* ZZMemoryCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 		188354BA1CFAA3C60078359F /* ZZCacheUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZCacheUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188354BE1CFAA3C60078359F /* ZZCacheUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCacheUITests.m; sourceTree = "<group>"; };
 		188354C01CFAA3C60078359F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		188354CA1CFAA4240078359F /* ZZCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCache.h; sourceTree = "<group>"; };
+		188354CB1CFAA4240078359F /* ZZCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCache.m; sourceTree = "<group>"; };
+		188354CD1CFAA6240078359F /* ZZDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDiskCache.h; sourceTree = "<group>"; };
+		188354CE1CFAA6240078359F /* ZZDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDiskCache.m; sourceTree = "<group>"; };
+		188354D01CFAA6430078359F /* ZZMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMemoryCache.h; sourceTree = "<group>"; };
+		188354D11CFAA6430078359F /* ZZMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMemoryCache.m; sourceTree = "<group>"; };
+		188354D31CFAD4C10078359F /* ZZCacheBackgroundTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCacheBackgroundTaskManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 		188354A31CFAA3C60078359F /* ZZCache */ = {
 			isa = PBXGroup;
 			children = (
+				188354C91CFAA3E40078359F /* ZZCache */,
 				188354A71CFAA3C60078359F /* AppDelegate.h */,
 				188354A81CFAA3C60078359F /* AppDelegate.m */,
 				188354AA1CFAA3C60078359F /* ViewController.h */,
@@ -109,6 +120,20 @@
 				188354C01CFAA3C60078359F /* Info.plist */,
 			);
 			path = ZZCacheUITests;
+			sourceTree = "<group>";
+		};
+		188354C91CFAA3E40078359F /* ZZCache */ = {
+			isa = PBXGroup;
+			children = (
+				188354CA1CFAA4240078359F /* ZZCache.h */,
+				188354CB1CFAA4240078359F /* ZZCache.m */,
+				188354CD1CFAA6240078359F /* ZZDiskCache.h */,
+				188354CE1CFAA6240078359F /* ZZDiskCache.m */,
+				188354D01CFAA6430078359F /* ZZMemoryCache.h */,
+				188354D11CFAA6430078359F /* ZZMemoryCache.m */,
+				188354D31CFAD4C10078359F /* ZZCacheBackgroundTaskManager.h */,
+			);
+			path = ZZCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188354CC1CFAA4240078359F /* ZZCache.m in Sources */,
 				188354AC1CFAA3C60078359F /* ViewController.m in Sources */,
 				188354A91CFAA3C60078359F /* AppDelegate.m in Sources */,
 				188354A61CFAA3C60078359F /* main.m in Sources */,
+				188354CF1CFAA6240078359F /* ZZDiskCache.m in Sources */,
+				188354D21CFAA6430078359F /* ZZMemoryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
